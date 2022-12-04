@@ -52,18 +52,16 @@ class Menu(ScriptReader):
         self.q_list.remove(self.question)
 
     def print_question(self):
-
         for ch in self.question:
             time.sleep(0.02)
             print(ch, end="")
         print("")
 
-
     def print_ans1(self):
-        print(self.ans1)
+        print(f'{self.ans1} - 1')
 
     def print_ans2(self):
-        print(self.ans2)
+        print(f'{self.ans2} - 2')
 
     @staticmethod
     def loading():
@@ -138,7 +136,8 @@ class Stats(Menu):
     def get_stats(self):
         stat_list = [self.church, self.society, self.army, self.treasury]
         stat_sing = ["†", "♀", "⚔", "$"]
-        print("\n─━───━────━──━──┙◆┕──━──━───━───━───━───━────━──━──┙◆┕──━──━───━───━───━───━────━──━──┙◆┕──━──━───━───━──")
+        print(
+            "\n─━───━────━──━──┙◆┕──━──━───━───━───━───━────━──━──┙◆┕──━──━───━───━───━───━────━──━──┙◆┕──━──━───━───━──")
         print(f"\n                                                 Год {self.year} ")
         self.year += 1
         print(f"                                                СТАТИСТИКА")
@@ -166,5 +165,3 @@ class Stats(Menu):
                 print(f'                                        {stat_sing[i]} -〘 ▌︎▌︎▌︎▌︎▌︎▌︎▌︎▌︎▌︎︎▌︎〙')
 
         print("")
-
-

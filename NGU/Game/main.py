@@ -7,7 +7,6 @@ player = Class.Stats("Script.txt", 50, 50, 50, 50)
 Class.Menu.loading()
 Class.Menu.loading_text("text.txt")
 
-
 while player.check_stat():
 
     player.get_stats()
@@ -21,7 +20,5 @@ while player.check_stat():
     print(5 * "\n")
     player_ans = int(input("Выберите вариант: "))
     player.change_stat(player_ans, out_menu.ans1, out_menu.ans2)
-
-
 
 print("ВЫ ПРОИГРАЛИ!")
